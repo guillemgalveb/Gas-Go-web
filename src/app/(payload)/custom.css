@@ -1,0 +1,7 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/roboto-mono';
+
+html:root {
+  --font-family-sans: 'Inter Variable', system-ui, sans-serif;
+  --font-family-mono: 'Roboto Mono Variable', monospace;
+}
