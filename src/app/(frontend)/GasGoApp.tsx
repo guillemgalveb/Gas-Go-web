@@ -3,6 +3,7 @@
 import { FormEvent, useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import dynamic from 'next/dynamic'
+import { corporateOnly, publicAsset } from '@/lib/public-site'
 import { SplashCursorCar } from './SplashCursorCar'
 
 const StationMap = dynamic(() => import('./StationMap'), {
@@ -71,7 +72,7 @@ function Logo({ light = false }: { light?: boolean }) {
       onClick={() => navigate('inicio')}
       aria-label="Ir al inicio"
     >
-      <img src="/gasandgo-logo.png" alt="Gas&Go" />
+      <img src={publicAsset('/gasandgo-logo.png')} alt="Gas&Go" />
     </button>
   )
 }
@@ -130,12 +131,16 @@ function Header({ page }: { page: Page }) {
         >
           Quiénes somos
         </button>
-        <button className="nav-login nav-selected-color" onClick={() => go('acceso')}>
-          Iniciar sesión
-        </button>
-        <button className="button button--small" onClick={() => go('registro')}>
-          Hazte cliente <span>→</span>
-        </button>
+        {!corporateOnly && (
+          <>
+            <button className="nav-login nav-selected-color" onClick={() => go('acceso')}>
+              Iniciar sesión
+            </button>
+            <button className="button button--small" onClick={() => go('registro')}>
+              Hazte cliente <span>→</span>
+            </button>
+          </>
+        )}
       </nav>
     </header>
   )
@@ -226,7 +231,7 @@ function Home() {
     <main className={`splash ${menuOpen ? 'splash--open' : ''}`}>
       <SplashCursorCar />
       <nav className="splash-menu" aria-label="Navegación principal">
-        {menuItems.map((item) => (
+        {menuItems.filter(({ page }) => !corporateOnly || (page !== 'acceso' && page !== 'registro')).map((item) => (
           <button
             className={`splash-link ${item.className}`}
             key={item.page}
@@ -244,7 +249,7 @@ function Home() {
           aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
           aria-expanded={menuOpen}
         >
-          <img src="/gasandgo-home-logo.png" alt="Gas&Go" />
+          <img src={publicAsset('/gasandgo-home-logo.png')} alt="Gas&Go" />
         </button>
         <AnimatePresence>
           {hintVisible && !menuOpen && (
@@ -332,7 +337,13 @@ function Stations() {
           <span /> Estaciones y precios del Geoportal oficial
         </div>
       </section>
-      <StationMap />
+      {corporateOnly ? (
+        <section className="station-map-placeholder">
+          <a className="button" href="https://geoportalgasolineras.es/geoportal-instalaciones/Inicio" target="_blank" rel="noreferrer">
+            Consultar estaciones en el Geoportal oficial ↗
+          </a>
+        </section>
+      ) : <StationMap />}
     </main>
   )
 }
@@ -522,7 +533,7 @@ function FlowSlider() {
                       zIndex: slides.length - distance,
                     }}
                   >
-                    <img src={`/flow/step-${index + 1}.png`} alt="" />
+                    <img src={publicAsset(`/flow/step-${index + 1}.png`)} alt="" />
                     <span>{String(index + 1).padStart(2, '0')}</span>
                   </motion.button>
                 )
@@ -882,7 +893,7 @@ function Team() {
           </blockquote>
         </div>
         <figure className="team-photo">
-          <img src="/gasandgo-founders.png" alt="Los dos creadores de Gas&Go" />
+          <img src={publicAsset('/gasandgo-founders.png')} alt="Los dos creadores de Gas&Go" />
           <figcaption>
             <span>Los fundadores</span>
             <strong>El equipo detrás de Gas&amp;Go</strong>
@@ -1106,6 +1117,7 @@ function Footer() {
 export default function App() {
   const getPage = (): Page => {
     const value = window.location.hash.slice(1)
+    if (corporateOnly && (value === 'acceso' || value === 'registro')) return 'inicio'
     return [
       'servicios',
       'ecosistema',

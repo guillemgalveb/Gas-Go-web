@@ -1,0 +1,24 @@
+1:"$Sreact.fragment"
+2:"/Gas-Go-web/_next/static/chunks/1vr3u6tyj7wje.js"
+3:I[57034,["$2"],"default"]
+4:I[98405,["$2"],"default"]
+5:"/Gas-Go-web/_next/static/chunks/1ichyugkc2gmt.js"
+6:I[62036,["$2","$5"],""]
+8:"/Gas-Go-web/_next/static/chunks/1acj7fpruia2b.js"
+9:"/Gas-Go-web/_next/static/chunks/0pt-a3oyxs5ux.js"
+a:I[34546,["$2","$8","$9"],"default"]
+b:I[71849,["$2"],"OutletBoundary"]
+c:"$Sreact.suspense"
+e:"ViewportBoundary"
+f:I[71849,["$2"],"$e"]
+11:"MetadataBoundary"
+12:I[71849,["$2"],"$11"]
+14:I[23101,["$2"],"default",1]
+:HL["/Gas-Go-web/_next/static/chunks/04qwqj056_y31.css","style"]
+:HC["/",""]
+7:[["children",{"s":"__PAGE__","h":512,"d":{"r":["$","$1","c",{"children":[["$","$La",null,{}],[["$","script","script-0",{"src":"/Gas-Go-web/_next/static/chunks/1acj7fpruia2b.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Gas-Go-web/_next/static/chunks/0pt-a3oyxs5ux.js","async":true,"nonce":"$undefined"}]],["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":false,"v":null}}]]
+0:{"P":null,"c":["",""],"q":"","i":false,"t":{"t":{"s":"","h":528,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Gas-Go-web/_next/static/chunks/04qwqj056_y31.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Gas-Go-web/_next/static/chunks/1vr3u6tyj7wje.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"es","children":[["$","head",null,{"children":[null,null]}],["$","body",null,{"className":"min-h-screen bg-white text-zinc-950 antialiased","children":[null,false,["$","div",null,{"id":"root","tabIndex":-1,"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"className":"mx-auto flex min-h-[50vh] max-w-2xl flex-col items-center justify-center px-8 py-16 text-center","children":[["$","h1",null,{"className":"text-3xl font-semibold tracking-tight","children":"Page Not Found"}],["$","p",null,{"className":"mt-4 text-zinc-600","children":"The page you're looking for doesn't exist or has been moved."}],["$","$L6",null,{"className":"mt-6 font-medium text-blue-600 underline-offset-4 hover:underline","href":"/","children":"← Back to Home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],"",null]}]]}]]}],"p":false,"v":null},"c":"$Q7"},"h":{"r":["$","$1","h",{"children":[null,["$","$Lf",null,{"children":"$L10"}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":"$L13"}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":false,"v":null}},"m":"$undefined","G":["$14",[["$","link","0",{"rel":"stylesheet","href":"/Gas-Go-web/_next/static/chunks/04qwqj056_y31.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"DPYVskDEttQu4ZoCC_gcC"}
+10:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+15:I[97576,["$2"],"IconMark"]
+d:null
+13:[["$","title","0",{"children":"Gas&Go"}],["$","meta","1",{"name":"description","content":"Identificación del vehículo, autorización del surtidor y pago automático en un único flujo."}],["$","meta","2",{"property":"og:title","content":"Gas&Go"}],["$","meta","3",{"property":"og:description","content":"Identificación del vehículo, autorización del surtidor y pago automático en un único flujo."}],["$","meta","4",{"name":"twitter:card","content":"summary"}],["$","meta","5",{"name":"twitter:title","content":"Gas&Go"}],["$","meta","6",{"name":"twitter:description","content":"Identificación del vehículo, autorización del surtidor y pago automático en un único flujo."}],["$","link","7",{"rel":"icon","href":"/Gas-Go-web/favicon.svg"}],["$","$L15","8",{}]]

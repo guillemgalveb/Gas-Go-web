@@ -31,3 +31,23 @@ Configura el primer administrador en `/admin` con el acceso al servicio restring
 El mapa consulta `sedeaplicaciones.minetur.gob.es` desde el servidor y descarga los mapas de OpenStreetMap desde el navegador. El portal, el panel y las API requieren un servidor, por lo que el proyecto completo necesita un alojamiento distinto de GitHub Pages.
 
 La base de datos se inicializa vacía. Los datos del backend de Figma, como cuentas, vehículos, repostajes, puntos y archivos subidos al CMS, requerirían una exportación aparte. Las imágenes incluidas en el ZIP se conservan en `public/`.
+
+## Web corporativa en GitHub Pages
+
+La versión pública se genera desde los mismos componentes de Figma que usa
+la aplicación completa. Incluye la portada y las secciones corporativas, con
+un enlace al Geoportal en la sección Estaciones. El portal de clientes y
+el panel de administración requieren el despliegue con Node.js descrito arriba.
+
+```sh
+pnpm install --frozen-lockfile
+pnpm build:pages
+```
+
+La compilación reemplaza el contenido generado en `docs/`. Para publicarla,
+incluye esa carpeta en el commit de `main` y selecciona **Settings → Pages →
+Deploy from a branch → main → /docs**. El despliegue se puede seguir en
+**Actions → pages build and deployment**.
+
+La web se abre en <https://guillemgalveb.github.io/Gas-Go-web/>. En la portada,
+pulsa el logotipo para abrir el menú.

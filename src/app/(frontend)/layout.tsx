@@ -6,6 +6,7 @@ import {
   makeSiteSettings,
   sanitizeHtmlAttribute,
 } from "@/lib/make-site-settings"
+import { publicAsset } from "@/lib/public-site"
 import "./styles.css"
 
 const defaultTitle = "Gas&Go"
@@ -13,7 +14,7 @@ const title = makeSiteSettings.title ?? defaultTitle
 const description =
   makeSiteSettings.description ??
   "Identificación del vehículo, autorización del surtidor y pago automático en un único flujo."
-const favicon = makeSiteSettings.icons?.icon
+const favicon = makeSiteSettings.icons?.icon ?? publicAsset("/favicon.svg")
 const socialImage = makeSiteSettings.openGraph?.image
 const googleAnalyticsId = sanitizeHtmlAttribute(
   makeSiteSettings.analytics?.googleAnalyticsId,

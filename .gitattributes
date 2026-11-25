@@ -147,3 +147,6 @@
 
 # Keep the exported site images in ordinary Git for simple cloning.
 public/**/*.png -filter -diff -merge -text
+
+# GitHub Pages serves files directly from the static export.
+docs/** -filter

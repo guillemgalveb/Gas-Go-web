@@ -1,5 +1,6 @@
 'use client'
 
+import { publicAsset } from '@/lib/public-site'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Html, Line, OrbitControls, RoundedBox } from '@react-three/drei'
 import Image from 'next/image'
@@ -357,12 +358,12 @@ function Store({ highlighted, night }: { highlighted: boolean; night: boolean })
       ))}
       <Html position={[-2.6, 3.55, 1.82]} transform distanceFactor={3.5}>
         <div className="services-store-logo services-store-logo--gas">
-          <Image src="/gasandgo-logo.png" alt="Gas&Go" width={280} height={116} unoptimized />
+          <Image src={publicAsset('/gasandgo-logo.png')} alt="Gas&Go" width={280} height={116} unoptimized />
         </div>
       </Html>
       <Html position={[3.55, 2.95, 1.82]} transform distanceFactor={3.5}>
         <div className="services-store-logo services-store-logo--take">
-          <Image src="/takeandgo-logo.png" alt="Take&Go" width={110} height={110} unoptimized />
+          <Image src={publicAsset('/takeandgo-logo.png')} alt="Take&Go" width={110} height={110} unoptimized />
         </div>
       </Html>
       <pointLight
@@ -709,7 +710,7 @@ export default function Services3D() {
         {webgl === false && (
           <div className="services-fallback">
             <Image
-              src="/gasandgo-station-reference.png"
+              src={publicAsset('/gasandgo-station-reference.png')}
               alt="Estación de servicio Gas&Go de noche"
               fill
               sizes="100vw"

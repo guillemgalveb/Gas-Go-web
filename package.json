@@ -61,7 +61,8 @@
     "format": "oxfmt",
     "generate:importmap": "NODE_OPTIONS=--no-deprecation payload generate:importmap",
     "generate:types": "NODE_OPTIONS=--no-deprecation payload generate:types",
-    "payload": "NODE_OPTIONS=--no-deprecation payload"
+    "payload": "NODE_OPTIONS=--no-deprecation payload",
+    "build:pages": "node scripts/build-pages.mjs"
   },
   "type": "module",
   "version": "0.0.0"
